@@ -1,0 +1,17 @@
+GenAI Coding Automation example prompts 
+  - Write a python code that (1) undos the max_normalisation of the CPU_frequency column, and (2) renormalises it to min-max
+  - Write a python code that converts the values of the "Price" column of a dataframe df from usd to euros
+  - Write a Python code to perform the following tasks.
+      1. Convert a data frame df attribute "Screen", into indicator variables, saved as df1, with the naming convention "Screen_<unique value of the attribute>".
+      2. Append df1 into the original data frame df.
+      3. Drop the original attribute from the data frame df.
+  - Write a Python code to normalize the content under the attribute "CPU_frequency" in a data frame df concerning its maximum value. 
+      - Make changes to the original data, and do not create a new attribute.
+  - Write a Python code to modify the contents under the following attributes of the data frame as required.
+      1. Data under 'Screen_Size_cm' is assumed to be in centimeters. Convert this data into inches. Modify the name of the attribute to 'Screen_Size_inch'.
+      2. Data under 'Weight_kg' is assumed to be in kilograms. Convert this data into pounds. Modify the name of the attribute to 'Weight_pounds'.
+  - write a python code to change the data type of the attributes "Screen_Size_cm" and "Weight_kg" of a dataframe to float
+  - write a python code to replace the missing values in a pandas dataframe per the following guidelines 
+      1. for categorical attribute "Screen_Size_cm", replace missing values with the most frequent value in the column 
+      2. for continuous value attribute "Weight_kg", replace missing values with the mean value of the entries in the column
+  - write a python code that identifies the columns with missing values in a pandas dataframe
