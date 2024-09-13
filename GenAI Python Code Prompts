@@ -23,3 +23,11 @@ GenAI EDA and Model Building example prompts
   - Write a Python code to perform the following actions.
     1. Create regression plots for the attributes "CPU_frequency", "Screen_Size_inch" and "Weight_pounds" against "Price".
     2. Create box plots for the attributes "Category", "GPU", "OS", "CPU_core", "RAM_GB" and "Storage_GB_SSD" against the attribute "Price".
+  - Write a Python code for the following.
+    1. Evaluate the correlation value, pearson coefficient and p-values for all numerical attributes against the target attribute "Price".
+    2. Don't include the values evaluated for target variable against itself.
+    3. Print these values as a part of a single dataframe against each individual attribute.
+  - Write a python code that performs the following actions.
+    1. Group the attributes "GPU", "CPU_core" and "Price", as available in a dataframe df
+    2. Create a pivot table for this group, assuming the target variable to be 'Price' and aggregation function as mean
+    3. Plot a pcolor plot for this pivot table.
