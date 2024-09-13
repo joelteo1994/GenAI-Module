@@ -15,3 +15,11 @@ GenAI Coding Automation example prompts
       1. for categorical attribute "Screen_Size_cm", replace missing values with the most frequent value in the column 
       2. for continuous value attribute "Weight_kg", replace missing values with the mean value of the entries in the column
   - write a python code that identifies the columns with missing values in a pandas dataframe
+
+GenAI EDA and Model Building example prompts 
+  - Write a python code to perform the following actions.
+    1. Import a data set from a CSV file, The headers for the data set must be in the first row of the CSV file.
+    2. Generate the statistical description of all the features used in the data set. Include "object" data types as well.
+  - Write a Python code to perform the following actions.
+    1. Create regression plots for the attributes "CPU_frequency", "Screen_Size_inch" and "Weight_pounds" against "Price".
+    2. Create box plots for the attributes "Category", "GPU", "OS", "CPU_core", "RAM_GB" and "Storage_GB_SSD" against the attribute "Price".
