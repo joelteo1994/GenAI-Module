@@ -31,3 +31,21 @@ GenAI EDA and Model Building example prompts
     1. Group the attributes "GPU", "CPU_core" and "Price", as available in a dataframe df
     2. Create a pivot table for this group, assuming the target variable to be 'Price' and aggregation function as mean
     3. Plot a pcolor plot for this pivot table.
+  - Write a Python code that performs the following tasks.
+    1. Develops and trains a linear regression model that uses one attribute of a data frame as the source variable and another as a target variable.
+    2. Calculate and display the MSE and R^2 values for the trained model
+  - Write a Python code that performs the following tasks.
+    1. Develops and trains a linear regression model that uses some attributes of a data frame as the source variables and one of the attributes as a target variable.
+    2. Calculate and display the MSE and R^2 values for the trained model.
+  - Write a Python code that performs the following tasks.
+    1. Develops and trains multiple polynomial regression models, with orders 2, 3, and 5, that use one attribute of a data frame as the source variable and another as a target variable.
+    2. Calculate and display the MSE and R^2 values for the trained models.
+    3. Compare the performance of the models.
+  -Write a Python code that performs the following tasks.
+    1. Create a pipeline that performs parameter scaling, Polynomial Feature generation, and Linear regression. Use the set of multiple features as before to create this pipeline.
+    2. Calculate and display the MSE and R^2 values for the trained model.
+  - Write a Python code that performs the following tasks.
+    1. Use polynomial features for some of the attributes of a data frame.
+    2. Perform Grid search on a ridge regression model for a set of values of hyperparameter alpha and polynomial features as input.
+    3. Use cross-validation in the Grid search.
+    4. Evaluate the resulting model's MSE and R^2 values.
