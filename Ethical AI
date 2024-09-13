@@ -1,0 +1,27 @@
+Scenario 1 
+  - Gen AI system that develops personalised content recommendation for users seems to consistently recommend content that aligns with certain cultural and demographic biases 
+  - To maintain transparency and fairness in the AI system, 
+    - Conduct thorough bias assessment to understand key biases present in the training data and algorithms 
+    - Use specialised tools or metrices to quantify the biases (e.g. Holistic AI library and IBM's Fairness 360)
+    - Enhance diversity of training data by includiing broader range of cultural, demographic, and user behaviour data
+    - Implement explainability features to provide users with insights into why specific recommendations were made 
+    - Offer transparency by showing key factors and attributes influencing the recommendations 
+    - Establish user feedback loop where users can report biased recommendations or provide feedback on content relevance
+    - Regulary analyse feedback to improve system's fairness
+
+Scenario 2
+  - Chatbot developed occasionally generates responses that are inappropriate or offensive, leading to customer dissatisfaction
+  - Ensure accountability in deployment of chatbot by
+    - Conducting detailed analysis of inappropriate responses to identify patterns and root causes 
+    - Determine whether issue stems from biased training data, algorithmic limitations, or other factors 
+    - Implement mechanism to quickly identify and rectify inappropriate responses (e.g. by updating chatbot training data or fine-tuning the model)
+    - Communicate openly with affected customers, acknowledge the issue and assure them of prompt corrective actions 
+
+Scenario 3
+  - GenAI that automatically generates product descriptions for e-commerce platform generates instances that contain inaccurate information. 
+  - Enhance reliability of AI model by 
+    - Implementing rigorous QA to evaluate accuracy of generated product descriptions 
+    - Creating comprehensive testing dataset that covers wide range of products and scenarios to identify and address inaccuracies 
+    - Ensure that AI model is trained on diverse and extensive dataset specific to the e-commerce domain 
+    - Implementing iterative training approach to continuously update and improve model based on user feedback and evolving product data
+En
