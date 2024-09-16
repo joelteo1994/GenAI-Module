@@ -55,15 +55,16 @@ def SGD(self, training_data, epochs, mini_batch_size, eta,
         network will be evaluated against the test data after each
         epoch, and partial progress printed out.  This is useful for
         tracking progress, but slows things down substantially."""
-        if test_data: n_test = len(test_data)
-        n = len(training_data)
-        for j in xrange(epochs):
-            random.shuffle(training_data)
+
+        if test_data: n_test = len(test_data) #checks if test_data if provided, if so, n_test stores the no. of test examples. Used to evaluate perf (end of each epoch)
+        n = len(training_data)     #stores total no. of training examples 
+        for j in xrange(epochs):     #Epoch loop. In python2, use xrange. Now (python3 onwards), use range. 
+            random.shuffle(training_data) #initialise each loop by randomly shuffling the training data, so that order is not erroneously learnt
             mini_batches = [
                 training_data[k:k+mini_batch_size]
-                for k in xrange(0, n, mini_batch_size)]
+                for k in xrange(0, n, mini_batch_size)] #list comprehension
             for mini_batch in mini_batches:
-                self.update_mini_batch(mini_batch, eta)
+                self.update_mini_batch(mini_batch, eta) #update step 
             if test_data:
                 print "Epoch {0}: {1} / {2}".format(
                     j, self.evaluate(test_data), n_test)
@@ -71,17 +72,19 @@ def SGD(self, training_data, epochs, mini_batch_size, eta,
                 print "Epoch {0} complete".format(j)
 
 def update_mini_batch(self, mini_batch, eta):
+
         """Update the network's weights and biases by applying
         gradient descent using backpropagation to a single mini batch.
         The "mini_batch" is a list of tuples "(x, y)", and "eta"
         is the learning rate."""
-        nabla_b = [np.zeros(b.shape) for b in self.biases]
-        nabla_w = [np.zeros(w.shape) for w in self.weights]
+
+        nabla_b = [np.zeros(b.shape) for b in self.biases]     #list of arrays initialised to zero, with same shape as biases of network (to accumulate the gradients of the biases over the mini-batch)
+        nabla_w = [np.zeros(w.shape) for w in self.weights]    #list of matrices initialised to zero, with same shape as the weights of the network. Accumulate the gradients of the weights over the mini-batch)
         for x, y in mini_batch:
-            delta_nabla_b, delta_nabla_w = self.backprop(x, y)
-            nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
+            delta_nabla_b, delta_nabla_w = self.backprop(x, y)     #backprop computes gradients of cost function for each training input (x,y) w.r.t biases and weights. Returns delta_nabla_b and delta_nabla_w which are the gradients of the biases and weights of the current example
+            nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)] 
             nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
-        self.weights = [w-(eta/len(mini_batch))*nw 
+        self.weights = [w-(eta/len(mini_batch))*nw                 #updating weights and biases; for each weight matrix and corresponding accumulated gradient, weights are updated accordingly 
                         for w, nw in zip(self.weights, nabla_w)]
         self.biases = [b-(eta/len(mini_batch))*nb 
                        for b, nb in zip(self.biases, nabla_b)]
@@ -151,5 +154,6 @@ def sigmoid_prime(z):
     # (1) In each epoch, randomly shuffle the training data, then partitions into mini-batches of appropriate size
     # (2) Then for each mini_batch, apply single step of gradient descent, done by the code self.update_mini_batch(mini_batch, eta)
 #Code for backpropagation omitted for now, studied in the next chapter
+#Epochs: no. of times the entire training data passes through the network whilst training 
 
 
