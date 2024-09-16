@@ -14,3 +14,4 @@ class Network(object):
 # there are better ways to choose starting positions (i.e. initialise the network), but this will do for now. 
 #[1:] - ignores first layer that stores inputs 
 #[:-1] - ignores the last (i.e. output) layer
+# x,y, in zip(sizes[:-1], sizes[1:]) pairs together the no. of neurons in the current layer (x) with the no. neurons in next layer (y) and zips as tuples 
