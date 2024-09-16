@@ -1,0 +1,16 @@
+# Define network class that takes in no. neurons per layer (including input and output) 
+
+class Network(object):
+
+    def __init__(self, sizes):
+        self.num_layers = len(sizes)
+        self.sizes = sizes
+        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+        self.weights = [np.random.randn(y, x) 
+                        for x, y in zip(sizes[:-1], sizes[1:])]
+
+# e.g. Network([2,3,1]) creates object with 2 neurons in first layer, 3 neurons in second layer, and 1 neuron int he final layer 
+# randomly initialize the bias and weights with the no.random.randn(y,1) where y is the no. neurons. (y,1) returns the array sampled from std normal dist 
+# there are better ways to choose starting positions (i.e. initialise the network), but this will do for now. 
+#[1:] - ignores first layer that stores inputs 
+#[:-1] - ignores the last (i.e. output) layer
